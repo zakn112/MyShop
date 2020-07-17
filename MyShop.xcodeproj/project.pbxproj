@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		33A1A46324C224550083B650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A1A46224C224550083B650 /* AppDelegate.swift */; };
 		33A1A46524C224550083B650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A1A46424C224550083B650 /* SceneDelegate.swift */; };
-		33A1A46724C224550083B650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A1A46624C224550083B650 /* ViewController.swift */; };
-		33A1A46A24C224550083B650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A1A46824C224550083B650 /* Main.storyboard */; };
 		33A1A46C24C224590083B650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A1A46B24C224590083B650 /* Assets.xcassets */; };
 		33A1A46F24C224590083B650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A1A46D24C224590083B650 /* LaunchScreen.storyboard */; };
 		33A1A47A24C224590083B650 /* MyShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A1A47924C224590083B650 /* MyShopTests.swift */; };
@@ -38,8 +36,6 @@
 		33A1A45F24C224550083B650 /* MyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A1A46224C224550083B650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A1A46424C224550083B650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33A1A46624C224550083B650 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		33A1A46924C224550083B650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33A1A46B24C224590083B650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33A1A46E24C224590083B650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33A1A47024C224590083B650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,10 @@
 		33A1A46124C224550083B650 /* MyShop */ = {
 			isa = PBXGroup;
 			children = (
-				33A1A46224C224550083B650 /* AppDelegate.swift */,
-				33A1A46424C224550083B650 /* SceneDelegate.swift */,
-				33A1A46624C224550083B650 /* ViewController.swift */,
-				33A1A46824C224550083B650 /* Main.storyboard */,
-				33A1A46B24C224590083B650 /* Assets.xcassets */,
-				33A1A46D24C224590083B650 /* LaunchScreen.storyboard */,
-				33A1A47024C224590083B650 /* Info.plist */,
+				33A1A49224C226AB0083B650 /* App */,
+				33A1A49724C227E50083B650 /* Core */,
+				33A1A49824C228060083B650 /* Resources */,
+				33A1A49924C228320083B650 /* Environments */,
 			);
 			path = MyShop;
 			sourceTree = "<group>";
@@ -126,6 +119,71 @@
 				33A1A48624C224590083B650 /* Info.plist */,
 			);
 			path = MyShopUITests;
+			sourceTree = "<group>";
+		};
+		33A1A49224C226AB0083B650 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				33A1A46224C224550083B650 /* AppDelegate.swift */,
+				33A1A46424C224550083B650 /* SceneDelegate.swift */,
+				33A1A49324C226C40083B650 /* BusinessLogic */,
+				33A1A49424C226DF0083B650 /* Entity */,
+				33A1A49524C227080083B650 /* Assembly */,
+				33A1A49624C227570083B650 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		33A1A49324C226C40083B650 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		33A1A49424C226DF0083B650 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		33A1A49524C227080083B650 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		33A1A49624C227570083B650 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		33A1A49724C227E50083B650 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		33A1A49824C228060083B650 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33A1A46D24C224590083B650 /* LaunchScreen.storyboard */,
+				33A1A46B24C224590083B650 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		33A1A49924C228320083B650 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				33A1A47024C224590083B650 /* Info.plist */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +292,6 @@
 			files = (
 				33A1A46F24C224590083B650 /* LaunchScreen.storyboard in Resources */,
 				33A1A46C24C224590083B650 /* Assets.xcassets in Resources */,
-				33A1A46A24C224550083B650 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A1A46724C224550083B650 /* ViewController.swift in Sources */,
 				33A1A46324C224550083B650 /* AppDelegate.swift in Sources */,
 				33A1A46524C224550083B650 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		33A1A46824C224550083B650 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33A1A46924C224550083B650 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		33A1A46D24C224590083B650 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -435,7 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyShop/Info.plist;
+				INFOPLIST_FILE = MyShop/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyShop/Info.plist;
+				INFOPLIST_FILE = MyShop/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
