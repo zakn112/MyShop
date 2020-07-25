@@ -45,6 +45,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        let catalogData = requestFactory.makeCatalogDataRequestFactory()
+        catalogData.catalogData() { response in
+            switch response.result {
+            case .success(let catalog):
+                print(catalog)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         
         return true
     }
