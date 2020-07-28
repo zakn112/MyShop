@@ -34,7 +34,7 @@ class ResponseCodableTests: XCTestCase {
     func testLogin() {
         let expectation = XCTestExpectation(description: "login")
         let auth = requestFactory.makeAuthRequestFatory()
-        auth.login(userName: "Somebody", password: "mypassword") { response in
+        auth.login(userName: "geekbrains", password: "123") { response in
             switch response.result {
             case .success(_):
                 XCTAssert(true)
