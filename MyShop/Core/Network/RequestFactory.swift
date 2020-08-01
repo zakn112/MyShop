@@ -54,4 +54,9 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return CatalogData(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeReviewDataRequestFactory() -> ReviewDataRequestFactory {
+        let errorParser = makeErrorParser()
+        return Review(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }

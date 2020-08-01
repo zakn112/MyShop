@@ -40,6 +40,9 @@
 		33E6D6B524CC421500120618 /* CatalogDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6B424CC421500120618 /* CatalogDataRequestFactory.swift */; };
 		33E6D6B724CC424D00120618 /* CatalogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6B624CC424D00120618 /* CatalogData.swift */; };
 		33E6D6B924CC432E00120618 /* CatalogDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6B824CC432E00120618 /* CatalogDataResult.swift */; };
+		33F7928624D57B0E00295D83 /* ReviewDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7928524D57B0E00295D83 /* ReviewDataRequestFactory.swift */; };
+		33F7928824D57BA100295D83 /* ReviewDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7928724D57BA100295D83 /* ReviewDataResult.swift */; };
+		33F7928A24D57DC000295D83 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7928924D57DC000295D83 /* Review.swift */; };
 		59B50081A8BEEFB4AE142A28 /* Pods_MyShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B965C77C244637D03018EC /* Pods_MyShop.framework */; };
 		8887AE5602062B5940038C9B /* Pods_MyShop_MyShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26A55DBC596E7C90D691DA1 /* Pods_MyShop_MyShopUITests.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +104,9 @@
 		33E6D6B424CC421500120618 /* CatalogDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataRequestFactory.swift; sourceTree = "<group>"; };
 		33E6D6B624CC424D00120618 /* CatalogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogData.swift; sourceTree = "<group>"; };
 		33E6D6B824CC432E00120618 /* CatalogDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataResult.swift; sourceTree = "<group>"; };
+		33F7928524D57B0E00295D83 /* ReviewDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDataRequestFactory.swift; sourceTree = "<group>"; };
+		33F7928724D57BA100295D83 /* ReviewDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDataResult.swift; sourceTree = "<group>"; };
+		33F7928924D57DC000295D83 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		39B965C77C244637D03018EC /* Pods_MyShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		567B4BF9771A032C4EA891A7 /* Pods-MyShop-MyShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyShop-MyShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyShop-MyShopUITests/Pods-MyShop-MyShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		71EA274FE1B5FFEF7FEA7F21 /* Pods-MyShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyShop.debug.xcconfig"; path = "Target Support Files/Pods-MyShop/Pods-MyShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 				33C49CA124C7599A00B9C191 /* User.swift */,
 				33E6D6AE24CC3B9100120618 /* GetGoodByIdResult.swift */,
 				33E6D6B824CC432E00120618 /* CatalogDataResult.swift */,
+				33F7928724D57BA100295D83 /* ReviewDataResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -291,6 +298,8 @@
 				33E6D6B024CC3D4300120618 /* GetGoodById.swift */,
 				33E6D6B424CC421500120618 /* CatalogDataRequestFactory.swift */,
 				33E6D6B624CC424D00120618 /* CatalogData.swift */,
+				33F7928524D57B0E00295D83 /* ReviewDataRequestFactory.swift */,
+				33F7928924D57DC000295D83 /* Review.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -558,10 +567,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F7928824D57BA100295D83 /* ReviewDataResult.swift in Sources */,
 				33C49CC224C7739F00B9C191 /* ChangeUserData.swift in Sources */,
 				33C49CA224C7599A00B9C191 /* User.swift in Sources */,
 				33C49CBC24C7702F00B9C191 /* Logout.swift in Sources */,
 				33C49CAF24C75F4D00B9C191 /* DataRequest.swift in Sources */,
+				33F7928A24D57DC000295D83 /* Review.swift in Sources */,
 				33C49CA024C7597F00B9C191 /* LoginResult.swift in Sources */,
 				33C49CA524C759F900B9C191 /* AuthRequestFactory.swift in Sources */,
 				33E6D6B324CC403900120618 /* Good.swift in Sources */,
@@ -576,6 +587,7 @@
 				33A1A46324C224550083B650 /* AppDelegate.swift in Sources */,
 				33C49CB624C76CD600B9C191 /* RegisterUser.swift in Sources */,
 				33C49CC024C7738800B9C191 /* ChangeUserDataRequestFactory.swift in Sources */,
+				33F7928624D57B0E00295D83 /* ReviewDataRequestFactory.swift in Sources */,
 				33E6D6B924CC432E00120618 /* CatalogDataResult.swift in Sources */,
 				33E6D6AF24CC3B9100120618 /* GetGoodByIdResult.swift in Sources */,
 				33A1A46524C224550083B650 /* SceneDelegate.swift in Sources */,

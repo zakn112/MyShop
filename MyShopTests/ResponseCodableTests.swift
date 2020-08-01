@@ -121,6 +121,51 @@ class ResponseCodableTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+    func testAddReview(){
+        let expectation = XCTestExpectation(description: "addReview")
+        let review = requestFactory.makeReviewDataRequestFactory()
+        review.addReview(userID: 1, comment: "some comment") { response in
+            switch response.result {
+            case .success(_):
+                XCTAssert(true)
+            case .failure(_):
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testApproveReview(){
+        let expectation = XCTestExpectation(description: "approveReview")
+        let review = requestFactory.makeReviewDataRequestFactory()
+        review.approveReview(commentID: 1) { response in
+            switch response.result {
+            case .success(_):
+                XCTAssert(true)
+            case .failure(_):
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testRemoveReview(){
+        let expectation = XCTestExpectation(description: "removeReview")
+        let review = requestFactory.makeReviewDataRequestFactory()
+        review.removeReview(commentID: 1) { response in
+            switch response.result {
+            case .success(_):
+                XCTAssert(true)
+            case .failure(_):
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
 
 }
 
