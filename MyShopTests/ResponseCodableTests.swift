@@ -166,6 +166,50 @@ class ResponseCodableTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+    func testAddToBasket(){
+        let expectation = XCTestExpectation(description: "addToBasket")
+        let review = requestFactory.makeBasketDataRequestFactory()
+        review.addToBasket(goodID: 1) { response in
+            switch response.result {
+            case .success(_):
+                XCTAssert(true)
+            case .failure(_):
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testDeleteFromBasket(){
+        let expectation = XCTestExpectation(description: "deleteFromBasket")
+        let review = requestFactory.makeBasketDataRequestFactory()
+        review.deleteFromBasket(goodID: 1) { response in
+            switch response.result {
+            case .success(_):
+                XCTAssert(true)
+            case .failure(_):
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testGetBasket(){
+        let expectation = XCTestExpectation(description: "getBasket")
+        let review = requestFactory.makeBasketDataRequestFactory()
+        review.getBasket() { response in
+            switch response.result {
+            case .success(_):
+                XCTAssert(true)
+            case .failure(_):
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
 
 }
 
