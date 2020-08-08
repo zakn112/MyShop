@@ -37,10 +37,24 @@ extension RequestRouter {
         
         switch self.encoding {
         case .url:
+            urlRequest = try encode(urlRequest, with: parameters)
             return try URLEncoding.default.encode(urlRequest, with: parameters)
         case .json:
             return try JSONEncoding.default.encode(urlRequest, with: parameters)
         }
         
+    }
+    
+    func encode(_ urlRequest: Alamofire.URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        guard let parameters = parameters else { return try urlRequest.asURLRequest() }
+        var urlRequest = try urlRequest.asURLRequest()
+        if var url = urlRequest.url?.absoluteString.removingPercentEncoding {
+            for parameter in parameters {
+                url = url.replacingOccurrences(of: "{\(parameter.key)}", with: "\(parameter.value)")
+            }
+            guard let url = URL(string: url) else { return try urlRequest.asURLRequest() }
+            urlRequest.url = url
+        }
+        return urlRequest
     }
 }

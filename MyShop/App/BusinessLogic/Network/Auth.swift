@@ -36,7 +36,7 @@ extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "login"
+        let path: String = "login/{username}/{password}"
         
         let login: String
         let password: String

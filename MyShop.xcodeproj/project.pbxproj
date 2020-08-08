@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2BBD82CF85E28858447E152B /* Pods_MyShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AD9B4053EE3C6C2CE135F4 /* Pods_MyShopTests.framework */; };
+		33051ED624DE7FA400775BEB /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33051ED524DE7FA400775BEB /* Auth.storyboard */; };
+		33051EDB24DE852400775BEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33051EDA24DE852400775BEB /* LoginViewController.swift */; };
+		33051EDF24DE86D600775BEB /* SinginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33051EDE24DE86D600775BEB /* SinginViewController.swift */; };
+		33051EE424DE883A00775BEB /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33051EE324DE883A00775BEB /* UserInfoViewController.swift */; };
 		3324E90224DB0DFC007F6D95 /* BasketDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324E90124DB0DFC007F6D95 /* BasketDataRequestFactory.swift */; };
 		3324E90424DB0E1E007F6D95 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324E90324DB0E1E007F6D95 /* Basket.swift */; };
 		3324E90624DB0E8C007F6D95 /* BasketDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324E90524DB0E8C007F6D95 /* BasketDataResult.swift */; };
@@ -69,6 +73,10 @@
 
 /* Begin PBXFileReference section */
 		00BBCC70FD973A8A3CDF6BF8 /* Pods-MyShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyShopTests.debug.xcconfig"; path = "Target Support Files/Pods-MyShopTests/Pods-MyShopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33051ED524DE7FA400775BEB /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		33051EDA24DE852400775BEB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		33051EDE24DE86D600775BEB /* SinginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinginViewController.swift; sourceTree = "<group>"; };
+		33051EE324DE883A00775BEB /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		3324E90124DB0DFC007F6D95 /* BasketDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketDataRequestFactory.swift; sourceTree = "<group>"; };
 		3324E90324DB0E1E007F6D95 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		3324E90524DB0E8C007F6D95 /* BasketDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketDataResult.swift; sourceTree = "<group>"; };
@@ -159,6 +167,54 @@
 				D9AD9B4053EE3C6C2CE135F4 /* Pods_MyShopTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33051ED824DE81D500775BEB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				33051ED924DE81EC00775BEB /* Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		33051ED924DE81EC00775BEB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33051EDA24DE852400775BEB /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33051EDC24DE86B400775BEB /* Singin */ = {
+			isa = PBXGroup;
+			children = (
+				33051EDD24DE86BE00775BEB /* Controllers */,
+			);
+			path = Singin;
+			sourceTree = "<group>";
+		};
+		33051EDD24DE86BE00775BEB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33051EDE24DE86D600775BEB /* SinginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33051EE124DE87F500775BEB /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				33051EE224DE881C00775BEB /* Controllers */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		33051EE224DE881C00775BEB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33051EE324DE883A00775BEB /* UserInfoViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		33A1A45624C224550083B650 = {
@@ -261,6 +317,10 @@
 		33A1A49624C227570083B650 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				33051EE124DE87F500775BEB /* UserInfo */,
+				33051EDC24DE86B400775BEB /* Singin */,
+				33051ED824DE81D500775BEB /* Login */,
+				33051ED524DE7FA400775BEB /* Auth.storyboard */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -447,6 +507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33051ED624DE7FA400775BEB /* Auth.storyboard in Resources */,
 				33A1A46F24C224590083B650 /* LaunchScreen.storyboard in Resources */,
 				33A1A46C24C224590083B650 /* Assets.xcassets in Resources */,
 			);
@@ -589,7 +650,9 @@
 				33E6D6B524CC421500120618 /* CatalogDataRequestFactory.swift in Sources */,
 				33C49CB424C76C2700B9C191 /* RegisterUserRequestFactory.swift in Sources */,
 				33C49CC424C773B100B9C191 /* ChangeUserDataResult.swift in Sources */,
+				33051EE424DE883A00775BEB /* UserInfoViewController.swift in Sources */,
 				33C49CA924C75DD200B9C191 /* RequestFactory.swift in Sources */,
+				33051EDF24DE86D600775BEB /* SinginViewController.swift in Sources */,
 				33C49CB824C76DF300B9C191 /* RegisterUserResult.swift in Sources */,
 				33C49CAD24C75F0500B9C191 /* ErrorParser.swift in Sources */,
 				33C49CBE24C771F200B9C191 /* LogoutResult.swift in Sources */,
@@ -606,6 +669,7 @@
 				33E6D6B724CC424D00120618 /* CatalogData.swift in Sources */,
 				33E6D6B124CC3D4300120618 /* GetGoodById.swift in Sources */,
 				33C49CA724C75D7700B9C191 /* Auth.swift in Sources */,
+				33051EDB24DE852400775BEB /* LoginViewController.swift in Sources */,
 				33C49CAB24C75EB500B9C191 /* AbstractErrorParser.swift in Sources */,
 				3324E90224DB0DFC007F6D95 /* BasketDataRequestFactory.swift in Sources */,
 				33E6D6AD24CC3B2500120618 /* GoodDataRequestFactory.swift in Sources */,
