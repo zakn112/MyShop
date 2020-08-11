@@ -9,8 +9,7 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
-    var currentUser: User!
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userIDTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,7 +19,7 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let currentUser = currentUser {
+        if let currentUser = MyShopSession.shared.currentUser {
             userNameTextField.text = currentUser.login
             userIDTextField.text = String(currentUser.id)
             nameTextField.text = currentUser.name

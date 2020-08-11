@@ -11,8 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     var requestFactory: RequestFactory!
-    var currentUser: User!
-
+   
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -40,13 +39,17 @@ class LoginViewController: UIViewController {
         auth.login(userName: userName, password: userPassword) { response in
             switch response.result {
             case .success(let result):
-                self.currentUser = result.user
+                MyShopSession.shared.currentUser = result.user
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "loginUserInfo", sender: self)
+                   
+                    let storyboard = UIStoryboard(name: "Goods", bundle: nil)
+                    let homeViewController = storyboard.instantiateViewController(withIdentifier: "Goods")
+                    UIApplication.shared.windows.first!.rootViewController = homeViewController
+                  
                 }
             case .failure(_):
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Error", message: "Invalid username or password. Use geekbrains/123", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Error", message: "Invalid username or password. Use user/123", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alert.addAction(action)
                     self.present(alert, animated: true, completion: nil)
@@ -59,17 +62,7 @@ class LoginViewController: UIViewController {
     @IBAction func singinPressButton(_ sender: Any) {
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "loginUserInfo", let controller = segue.destination as? UserInfoViewController {
-            controller.currentUser = currentUser
-        }
-    }
+ 
     
 
 }
