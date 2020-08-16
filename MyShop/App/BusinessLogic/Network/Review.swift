@@ -41,6 +41,11 @@ extension Review: ReviewDataRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
+    func getGoodReviewsById(goodID: Int, completionHandler: @escaping (AFDataResponse<[UserReview]>) -> Void) {
+        let requestModel = GetGoodReviewsByIdRequestModel(baseUrl: baseUrl, goodID: goodID)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+    
 }
 
 extension Review {
@@ -81,6 +86,19 @@ extension Review {
         var parameters: Parameters? {
             return [
                 "commentID": commentID
+            ]
+        }
+    }
+    
+    struct GetGoodReviewsByIdRequestModel: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .get
+        let path: String = "getGoodReviewsById/{goodID}"
+        
+        let goodID: Int
+        var parameters: Parameters? {
+            return [
+                "goodID": goodID
             ]
         }
     }

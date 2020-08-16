@@ -26,7 +26,7 @@ class GetGoodById: AbstractRequestFactory {
 }
 
 extension GetGoodById: GetGoodByIdDataRequestFactory {
-    func getGoodById(id: String, completionHandler: @escaping (AFDataResponse<GetGoodByIdResult>) -> Void) {
+    func getGoodById(id: Int, completionHandler: @escaping (AFDataResponse<Good>) -> Void) {
         let requestModel = GetGoodByIdDataRequestModel(baseUrl: baseUrl, id: id)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -36,9 +36,9 @@ extension GetGoodById {
     struct GetGoodByIdDataRequestModel: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "getGoodById"
+        let path: String = "getGoodById/{id}"
         
-        let id: String
+        let id: Int
         var parameters: Parameters? {
             return [
                 "id": id

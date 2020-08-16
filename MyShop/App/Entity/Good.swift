@@ -12,11 +12,13 @@ struct Good: Codable {
     let name: String
     let price: Int
     let quantity: Int?
+    let productDescription: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id_product"
         case name = "product_name"
         case price = "price"
         case quantity = "quantity"
+        case productDescription = "product_description"
     }
 }

@@ -94,7 +94,7 @@ class ResponseCodableTests: XCTestCase {
     func testGetGoodById(){
         let expectation = XCTestExpectation(description: "getGoodById")
         let good = requestFactory.makeGoodDataRequestFactory()
-        good.getGoodById(id: "SomeId") { response in
+        good.getGoodById(id: 123) { response in
             switch response.result {
             case .success(_):
                 XCTAssert(true)
@@ -155,6 +155,21 @@ class ResponseCodableTests: XCTestCase {
         let expectation = XCTestExpectation(description: "removeReview")
         let review = requestFactory.makeReviewDataRequestFactory()
         review.removeReview(commentID: 1) { response in
+            switch response.result {
+            case .success(_):
+                XCTAssert(true)
+            case .failure(_):
+                XCTFail()
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testGetGoodReviewsById(){
+        let expectation = XCTestExpectation(description: "getGoodReviewsById")
+        let review = requestFactory.makeReviewDataRequestFactory()
+        review.getGoodReviewsById(goodID: 123) { response in
             switch response.result {
             case .success(_):
                 XCTAssert(true)
