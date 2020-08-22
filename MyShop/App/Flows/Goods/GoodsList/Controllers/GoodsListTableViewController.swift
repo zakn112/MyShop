@@ -9,7 +9,7 @@
 import UIKit
 
 class GoodsListTableViewController: UITableViewController {
-    var requestFactory: RequestFactory!
+    private var requestFactory: RequestFactory!
     var goods: [Good]?
     
     override func viewDidLoad() {
@@ -56,15 +56,18 @@ class GoodsListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "goodCell", for: indexPath)
-        
-        if let goods = goods {
-            cell.textLabel!.text = goods[indexPath.row].name
-            cell.detailTextLabel!.text = String(goods[indexPath.row].price)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "goodCell", for: indexPath) as? GoodTableViewCell,
+            let goods = goods {
+            cell.good = goods[indexPath.row]
+            cell.isAddBasket = true
+            cell.goodNametlabelView.text = goods[indexPath.row].name
+            cell.goodCostlabelView.text = String(goods[indexPath.row].price)
+            return cell
         }
-        // Configure the cell...
-
-        return cell
+        else{
+            return UITableViewCell()
+        }
+        
     }
     
 

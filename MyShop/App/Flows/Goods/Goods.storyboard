@@ -20,6 +20,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="piM-no-nMn" kind="relationship" relationship="viewControllers" id="Z0y-7y-Od5"/>
+                        <segue destination="2hy-aS-x27" kind="relationship" relationship="viewControllers" id="luR-vE-xhI"/>
                         <segue destination="G5I-At-7xj" kind="relationship" relationship="viewControllers" id="P6q-ld-WyA"/>
                     </connections>
                 </tabBarController>
@@ -53,28 +54,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goodCell" textLabel="O8H-s3-1D5" detailTextLabel="dZr-1I-FZf" style="IBUITableViewCellStyleValue1" id="r5W-ZP-1ad">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goodCell" id="r5W-ZP-1ad" customClass="GoodTableViewCell" customModule="MyShop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r5W-ZP-1ad" id="QgJ-8V-IZP">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O8H-s3-1D5">
-                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dZr-1I-FZf">
-                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="i52-uW-AyK" kind="show" identifier="GoodInfo" id="Do5-ec-hHK"/>
@@ -101,8 +86,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyboard.chevron.compact.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-VL-igb">
-                                <rect key="frame" x="10" y="100" width="394" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notebook" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-VL-igb">
+                                <rect key="frame" x="10" y="98" width="394" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1sf-d2-zKn"/>
                                 </constraints>
@@ -228,6 +213,16 @@
             </objects>
             <point key="canvasLocation" x="-107.24637681159422" y="-1112.2767857142856"/>
         </scene>
+        <!--Basket-->
+        <scene sceneID="zzo-by-ObR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="B" storyboardName="Basket" id="2hy-aS-x27" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Basket" image="arrow.up.bin" catalog="system" selectedImage="arrow.up.bin.fill" id="P8C-RH-I96"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppf-zv-Z7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1731" y="173"/>
+        </scene>
         <!--User info-->
         <scene sceneID="MB4-Ju-CnU">
             <objects>
@@ -352,7 +347,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="keyboard.chevron.compact.down" catalog="system" width="128" height="91"/>
+        <image name="arrow.up.bin" catalog="system" width="128" height="93"/>
+        <image name="arrow.up.bin.fill" catalog="system" width="128" height="93"/>
+        <image name="notebook" width="130" height="130"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="tray" catalog="system" width="128" height="88"/>

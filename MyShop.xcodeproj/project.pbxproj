@@ -42,6 +42,9 @@
 		33C49CC024C7738800B9C191 /* ChangeUserDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C49CBF24C7738800B9C191 /* ChangeUserDataRequestFactory.swift */; };
 		33C49CC224C7739F00B9C191 /* ChangeUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C49CC124C7739F00B9C191 /* ChangeUserData.swift */; };
 		33C49CC424C773B100B9C191 /* ChangeUserDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C49CC324C773B100B9C191 /* ChangeUserDataResult.swift */; };
+		33D6424D24F0FDCD00216440 /* Basket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D6424C24F0FDCD00216440 /* Basket.storyboard */; };
+		33D6425424F1063800216440 /* BasketInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6425324F1063800216440 /* BasketInfoViewController.swift */; };
+		33D6425724F10B5B00216440 /* GoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6425624F10B5B00216440 /* GoodTableViewCell.swift */; };
 		33E6D6AB24CC2B8300120618 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6AA24CC2B8300120618 /* ResponseCodableTests.swift */; };
 		33E6D6AD24CC3B2500120618 /* GoodDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6AC24CC3B2500120618 /* GoodDataRequestFactory.swift */; };
 		33E6D6AF24CC3B9100120618 /* GetGoodByIdResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6AE24CC3B9100120618 /* GetGoodByIdResult.swift */; };
@@ -119,6 +122,9 @@
 		33C49CBF24C7738800B9C191 /* ChangeUserDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataRequestFactory.swift; sourceTree = "<group>"; };
 		33C49CC124C7739F00B9C191 /* ChangeUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserData.swift; sourceTree = "<group>"; };
 		33C49CC324C773B100B9C191 /* ChangeUserDataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserDataResult.swift; sourceTree = "<group>"; };
+		33D6424C24F0FDCD00216440 /* Basket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basket.storyboard; sourceTree = "<group>"; };
+		33D6425324F1063800216440 /* BasketInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInfoViewController.swift; sourceTree = "<group>"; };
+		33D6425624F10B5B00216440 /* GoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTableViewCell.swift; sourceTree = "<group>"; };
 		33E6D6AA24CC2B8300120618 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		33E6D6AC24CC3B2500120618 /* GoodDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDataRequestFactory.swift; sourceTree = "<group>"; };
 		33E6D6AE24CC3B9100120618 /* GetGoodByIdResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoodByIdResult.swift; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 		336DB11424E30FA00092609D /* GoodsList */ = {
 			isa = PBXGroup;
 			children = (
+				33D6425524F10B3700216440 /* Views */,
 				336DB11524E30FB10092609D /* Controllers */,
 			);
 			path = GoodsList;
@@ -368,6 +375,7 @@
 		33A1A49624C227570083B650 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				33D6424A24F0FBE500216440 /* Basket */,
 				336DB11124E302950092609D /* Goods */,
 				336DB11024E301250092609D /* Auth */,
 			);
@@ -432,6 +440,39 @@
 				33C49CA824C75DD200B9C191 /* RequestFactory.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		33D6424A24F0FBE500216440 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				33D6424B24F0FC0D00216440 /* BasketInfo */,
+				33D6424C24F0FDCD00216440 /* Basket.storyboard */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		33D6424B24F0FC0D00216440 /* BasketInfo */ = {
+			isa = PBXGroup;
+			children = (
+				33D6425224F105FB00216440 /* Controller */,
+			);
+			path = BasketInfo;
+			sourceTree = "<group>";
+		};
+		33D6425224F105FB00216440 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33D6425324F1063800216440 /* BasketInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33D6425524F10B3700216440 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33D6425624F10B5B00216440 /* GoodTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		33EAE5AC24E8424E00F32BF3 /* GoodInfo */ = {
@@ -584,6 +625,7 @@
 				33051ED624DE7FA400775BEB /* Auth.storyboard in Resources */,
 				33A1A46F24C224590083B650 /* LaunchScreen.storyboard in Resources */,
 				33A1A46C24C224590083B650 /* Assets.xcassets in Resources */,
+				33D6424D24F0FDCD00216440 /* Basket.storyboard in Resources */,
 				336DB11324E302B00092609D /* Goods.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,11 +775,13 @@
 				33C49CB824C76DF300B9C191 /* RegisterUserResult.swift in Sources */,
 				33C49CAD24C75F0500B9C191 /* ErrorParser.swift in Sources */,
 				33C49CBE24C771F200B9C191 /* LogoutResult.swift in Sources */,
+				33D6425724F10B5B00216440 /* GoodTableViewCell.swift in Sources */,
 				33C49CB124C760C100B9C191 /* RequestRouter.swift in Sources */,
 				33A1A46324C224550083B650 /* AppDelegate.swift in Sources */,
 				33C49CB624C76CD600B9C191 /* RegisterUser.swift in Sources */,
 				33C49CC024C7738800B9C191 /* ChangeUserDataRequestFactory.swift in Sources */,
 				33F7928624D57B0E00295D83 /* ReviewDataRequestFactory.swift in Sources */,
+				33D6425424F1063800216440 /* BasketInfoViewController.swift in Sources */,
 				33E6D6B924CC432E00120618 /* CatalogDataResult.swift in Sources */,
 				33E6D6AF24CC3B9100120618 /* GetGoodByIdResult.swift in Sources */,
 				33A1A46524C224550083B650 /* SceneDelegate.swift in Sources */,

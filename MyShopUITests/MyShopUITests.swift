@@ -40,4 +40,64 @@ class MyShopUITests: XCTestCase {
             }
         }
     }
+    
+    func testLogin() throws {
+        // UI tests must launch the application that they test.
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        let userNameField = app.textFields["userNameField"]
+        userNameField.tap()
+        userNameField.typeText("user")
+        
+        let passwordField = app.textFields["passwordField"]
+        passwordField.tap()
+        passwordField.typeText("123")
+        
+        let loginButton = app.buttons["Log in"]
+        loginButton.tap()
+               
+        if app.tabBars.buttons["Goods"].exists {
+            XCTAssert(true)
+        }else{
+            XCTFail()
+        }
+        
+    }
+    
+    func testSingin() throws {
+         let app = XCUIApplication()
+         app.launch()
+        
+        let singButtonLoginWindow = app.buttons["Sing in"]
+        singButtonLoginWindow.tap()
+          
+        let singButtonSinginWindow = app.buttons["Sing in"]
+                
+        if !singButtonSinginWindow.exists {
+            XCTFail()
+            return
+        }
+        
+        let userNameField = app.textFields["userNameField"]
+        userNameField.tap()
+        userNameField.typeText("user")
+        
+        let passwordField = app.textFields["passwordField"]
+        passwordField.tap()
+        passwordField.typeText("123")
+
+        singButtonSinginWindow.tap()
+        
+        if app.alerts["Success"].scrollViews.otherElements.buttons["OK"].exists {
+            XCTAssert(true)
+        }else{
+            XCTFail()
+        }
+        
+        
+      }
+    
+  
 }

@@ -34,6 +34,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-xy-Aei">
                                 <rect key="frame" x="10" y="219" width="394" height="34"/>
                                 <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="userNameField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="LzE-HT-Dal"/>
                                 </constraints>
@@ -42,6 +43,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy0-Y4-Pjc">
                                 <rect key="frame" x="10" y="294" width="394" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="w2e-xE-OVj"/>
                                 </constraints>
@@ -51,6 +53,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meB-Lb-fQa">
                                 <rect key="frame" x="10" y="338" width="394" height="30"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton" label="loginButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="phb-t5-VvX"/>
                                 </constraints>
@@ -137,6 +140,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWn-Jm-VKy">
                                 <rect key="frame" x="10" y="219" width="394" height="34"/>
                                 <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="userNameField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="7I6-Jg-iag"/>
                                 </constraints>
@@ -145,11 +149,12 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mo-3Z-Jus">
                                 <rect key="frame" x="10" y="294" width="394" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="ghH-qB-4X4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwm-CX-N9K">
                                 <rect key="frame" x="10" y="338" width="394" height="30"/>

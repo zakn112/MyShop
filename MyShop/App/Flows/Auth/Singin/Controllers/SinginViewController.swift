@@ -40,7 +40,7 @@ class SinginViewController: UIViewController {
             switch response.result {
             case .success(_):
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Error", message: "Registration was completed successfully", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Success", message: "Registration was completed successfully", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alert.addAction(action)
                     self.present(alert, animated: true, completion: nil)
