@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class GoodInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var requestFactory: RequestFactory!
@@ -59,7 +60,11 @@ class GoodInfoViewController: UIViewController, UITableViewDelegate, UITableView
             
             
         }
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Analytics.logEvent("Open_good_info", parameters: nil)
     }
     
     

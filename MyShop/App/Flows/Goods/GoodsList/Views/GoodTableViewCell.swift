@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class GoodTableViewCell: UITableViewCell {
     private var requestFactory: RequestFactory!
@@ -103,6 +104,7 @@ class GoodTableViewCell: UITableViewCell {
             basket.addToBasket(goodID: good!.id){ response in
                 switch response.result {
                 case .success(_):
+                    Analytics.logEvent("Good_add_basket", parameters: nil)
                     break
                 case .failure(_):
                     break
@@ -115,6 +117,7 @@ class GoodTableViewCell: UITableViewCell {
             basket.deleteFromBasket(goodID: good!.id){ response in
                 switch response.result {
                 case .success(_):
+                    Analytics.logEvent("Good_delete_basket", parameters: nil)
                     break
                 case .failure(_):
                     break

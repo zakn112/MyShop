@@ -82,6 +82,9 @@
                                 <state key="normal" title="Pay">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="payButtonPress:" destination="TZY-Fk-Pi1" eventType="touchUpInside" id="oOU-Bw-biY"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZWx-4a-OGR">
                                 <rect key="frame" x="10" y="230" width="394" height="573"/>

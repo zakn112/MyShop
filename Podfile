@@ -6,8 +6,11 @@ target 'MyShop' do
   use_frameworks!
 
   # Pods for MyShop
-  pod 'Swinject'
-  pod 'Alamofire', '~> 5.2'
+  #pod 'Swinject'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics' 
+  pod 'Alamofire'
+ 
 
   target 'MyShopTests' do
     inherit! :search_paths

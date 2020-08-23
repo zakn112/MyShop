@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 class SinginViewController: UIViewController {
     var requestFactory: RequestFactory!
@@ -31,6 +33,9 @@ class SinginViewController: UIViewController {
             let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
+                
+            Crashlytics.crashlytics().log("Sing in.You must fill in your username and password.")
+            Analytics.logEvent("Sing_in_fill_username_password.", parameters: nil)
             return
         }
 
@@ -45,6 +50,8 @@ class SinginViewController: UIViewController {
                     alert.addAction(action)
                     self.present(alert, animated: true, completion: nil)
                     
+                    Analytics.logEvent("Sing_in_Success", parameters: nil)
+                    
                 }
             case .failure(_):
                 DispatchQueue.main.async {
@@ -52,6 +59,9 @@ class SinginViewController: UIViewController {
                     let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alert.addAction(action)
                     self.present(alert, animated: true, completion: nil)
+                    
+                    Analytics.logEvent("Sing_in_Error", parameters: nil)
+                    
                 }
             }
             

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class BasketInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -48,6 +49,10 @@ class BasketInfoViewController: UIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+       Analytics.logEvent("Open_basket", parameters: nil)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "goodCell", for: indexPath) as? GoodTableViewCell,
             let goods = goods {
@@ -65,6 +70,10 @@ class BasketInfoViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return goods?.count ?? 0 // your number of cells here
+    }
+    
+    @IBAction func payButtonPress(_ sender: Any) {
+        Analytics.logEvent("Pay", parameters: nil)
     }
     
     /*

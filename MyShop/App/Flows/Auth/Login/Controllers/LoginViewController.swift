@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
+import FirebaseAnalytics
 
 class LoginViewController: UIViewController {
     
@@ -32,6 +34,7 @@ class LoginViewController: UIViewController {
             let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
+                
             return
         }
 
@@ -46,6 +49,7 @@ class LoginViewController: UIViewController {
                     let homeViewController = storyboard.instantiateViewController(withIdentifier: "Goods")
                     UIApplication.shared.windows.first!.rootViewController = homeViewController
                   
+                    Analytics.logEvent("Login_success", parameters: nil)
                 }
             case .failure(_):
                 DispatchQueue.main.async {
@@ -53,6 +57,9 @@ class LoginViewController: UIViewController {
                     let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alert.addAction(action)
                     self.present(alert, animated: true, completion: nil)
+                    
+                    Crashlytics.crashlytics().log("Invalid username or password.")
+                    Analytics.logEvent("Invalid_username_password.", parameters: nil)
                 }
             }
             
@@ -60,6 +67,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func singinPressButton(_ sender: Any) {
+        Crashlytics.crashlytics().log("Sing in.Hello.")
+        
     }
     
  

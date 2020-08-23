@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class GoodsListTableViewController: UITableViewController {
     private var requestFactory: RequestFactory!
@@ -40,8 +41,13 @@ class GoodsListTableViewController: UITableViewController {
             }
             
         }
+        
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Analytics.logEvent("Open_goods_list", parameters: nil)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

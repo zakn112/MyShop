@@ -45,6 +45,7 @@
 		33D6424D24F0FDCD00216440 /* Basket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D6424C24F0FDCD00216440 /* Basket.storyboard */; };
 		33D6425424F1063800216440 /* BasketInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6425324F1063800216440 /* BasketInfoViewController.swift */; };
 		33D6425724F10B5B00216440 /* GoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6425624F10B5B00216440 /* GoodTableViewCell.swift */; };
+		33D6425924F1733300216440 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33D6425824F1733300216440 /* GoogleService-Info.plist */; };
 		33E6D6AB24CC2B8300120618 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6AA24CC2B8300120618 /* ResponseCodableTests.swift */; };
 		33E6D6AD24CC3B2500120618 /* GoodDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6AC24CC3B2500120618 /* GoodDataRequestFactory.swift */; };
 		33E6D6AF24CC3B9100120618 /* GetGoodByIdResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E6D6AE24CC3B9100120618 /* GetGoodByIdResult.swift */; };
@@ -125,6 +126,7 @@
 		33D6424C24F0FDCD00216440 /* Basket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Basket.storyboard; sourceTree = "<group>"; };
 		33D6425324F1063800216440 /* BasketInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInfoViewController.swift; sourceTree = "<group>"; };
 		33D6425624F10B5B00216440 /* GoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTableViewCell.swift; sourceTree = "<group>"; };
+		33D6425824F1733300216440 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		33E6D6AA24CC2B8300120618 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		33E6D6AC24CC3B2500120618 /* GoodDataRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDataRequestFactory.swift; sourceTree = "<group>"; };
 		33E6D6AE24CC3B9100120618 /* GetGoodByIdResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoodByIdResult.swift; sourceTree = "<group>"; };
@@ -403,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				33A1A47024C224590083B650 /* Info.plist */,
+				33D6425824F1733300216440 /* GoogleService-Info.plist */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -524,7 +527,8 @@
 				33A1A45B24C224550083B650 /* Sources */,
 				33A1A45C24C224550083B650 /* Frameworks */,
 				33A1A45D24C224550083B650 /* Resources */,
-				1CD97E4B5834DC870C41B55D /* [CP] Embed Pods Frameworks */,
+				095786BD2596693BFD0CCFCE /* [CP] Embed Pods Frameworks */,
+				33D6425A24F23BF500216440 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -562,7 +566,7 @@
 				33A1A47C24C224590083B650 /* Sources */,
 				33A1A47D24C224590083B650 /* Frameworks */,
 				33A1A47E24C224590083B650 /* Resources */,
-				139FF9F42D150E5C53D5F42A /* [CP] Embed Pods Frameworks */,
+				9D2C9BFD2803F7199FC5A0D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -627,6 +631,7 @@
 				33A1A46C24C224590083B650 /* Assets.xcassets in Resources */,
 				33D6424D24F0FDCD00216440 /* Basket.storyboard in Resources */,
 				336DB11324E302B00092609D /* Goods.storyboard in Resources */,
+				33D6425924F1733300216440 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,24 +652,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		139FF9F42D150E5C53D5F42A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyShop-MyShopUITests/Pods-MyShop-MyShopUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyShop-MyShopUITests/Pods-MyShop-MyShopUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyShop-MyShopUITests/Pods-MyShop-MyShopUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1CD97E4B5834DC870C41B55D /* [CP] Embed Pods Frameworks */ = {
+		095786BD2596693BFD0CCFCE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -680,6 +668,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyShop/Pods-MyShop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		33D6425A24F23BF500216440 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		3B5FD0846A752745CDB27759 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -723,6 +729,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D2C9BFD2803F7199FC5A0D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyShop-MyShopUITests/Pods-MyShop-MyShopUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyShop-MyShopUITests/Pods-MyShop-MyShopUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyShop-MyShopUITests/Pods-MyShop-MyShopUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A793C092907FD7E76B4E5E6C /* [CP] Check Pods Manifest.lock */ = {
@@ -964,6 +987,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = MyShop/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
